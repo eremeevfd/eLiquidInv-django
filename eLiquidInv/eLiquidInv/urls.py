@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^eLiquidInv/', include('eLiquidInventory.urls'))
+    url(r'', include('eLiquidInventory.urls'))
 ]

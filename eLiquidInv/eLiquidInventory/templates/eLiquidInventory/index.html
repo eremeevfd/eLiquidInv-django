@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if eLiquids %}
+    <ul>
+        {% for eLiquid in eLiquids %}
+        <li>
+            <a href="{% url 'eliquid' eLiquid.id %}">
+            {{ eLiquid.name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No eLiquids are available.</p>
+    {% endif %}
+</body>
+</html>

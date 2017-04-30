@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if composition %}
+        {{ eLiquid.name }}
+        <ul>
+        {% for comp in composition %}
+            <li>
+                {{ comp.flavorings.name }}
+                by {{ comp.flavorings.producer }}
+        {{ comp.quantity }} %
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No eLiquids are available.</p>
+    {% endif %}
+</body>
+</html>
